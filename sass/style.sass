@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap')
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: 'Open Sans', sans-serif
+    font-weight: 400
+.slider
+    width: 100%
+    max-height: 675px
+    height: 400px
+    position: relative
+    &-nav
+        display: none
+    &-preview
+        max-width: 78px
+        display: flex
+        justify-content: space-between
+        position: absolute
+        bottom: 27px
+        left: 50%
+        transform: translateX(-50%)
+        &__bg
+            height: 100%
+            width: 100%
+            position: absolute
+            top: 0
+            left: 0
+            z-index: 10
+            background: tomato
+        &__block
+            position: relative
+            overflow: hidden
+            border: 1px solid #282828
+            &:nth-child(-n+4)
+                height: 14px
+                width: 15px
+                border-radius: 50%
+            &:nth-child(2)
+                margin-left: 16px
+                margin-right: 16px
+            &:nth-child(4)
+                display: none
+
+            &--active
+                background-color: #282828
+        &__wrap
+            display: none
+    &-start
+        position: absolute
+        top: 0
+        left: 0
+        height: 100%
+        width: 100%
+        background: #C9D0DA
+        display: flex
+        justify-content: center
+        align-items: center
+        z-index: 999
+        &__hidden
+            display: none
+            opacity: 0
+        &__show
+            display: block
+
+        &__btn
+            padding: 9px 24px
+            text-decoration: none
+            font-size: 13px
+            line-height: 1.2
+            font-weight: 400
+            text-transform: uppercase
+            color: #ffffff
+            background-color: #ff891e
+            border-radius: 3px
+            border: none
+            overflow: hidden
+            cursor: pointer
+            transition: transform 0.3s
+            &:hover
+                transform: scale(1.1)
+        &__counter
+            font-size: 120px
+            font-weight: 700
+            color: #ff891e
+.slide
+    position: absolute
+    left: 0px
+    top: 0px
+    width: 100%
+    height: 100%
+    background-size: cover
+    opacity: 0
+    transition: opacity 1s
+    &-1
+        background: url(../img/mob-slides/slider_1min.jpg) no-repeat center center
+    &-2
+        background: url(../img/mob-slides/slider_2min.jpg) no-repeat center center
+    &-3
+        background: url(../img/mob-slides/slider_3min.jpg) no-repeat center center
+    &-4
+        background: url(../img/mob-slides/slider_4min.jpg) no-repeat center center
+    &-active
+        opacity: 1
+    &-container
+        height: 100%
+        width: 100%
+        padding-top: 121px
+        padding-left: 10px
+        padding-right: 10px
+        text-align: center
+    &-info
+        max-width: 335px
+        margin: 0 auto
+        &__title
+            font-size: 25px
+            line-height: 1.2
+            font-weight: 400
+            color: #000000
+            margin-bottom: 3px
+        &__descr
+            display: none
+        &__test
+            font-size: 18px
+            line-height: 29px
+            margin-bottom: 28px
+        &__button
+            padding: 9px 24px
+            text-decoration: none
+            font-size: 13px
+            line-height: 1.2
+            font-weight: 400
+            text-transform: uppercase
+        &__about
+            color: #ffffff
+            background-color: #ff891e
+            border-radius: 3px
+        &__all
+            display: none
+@media(min-width: 768px)
+    .slider
+        height: 675px
+        &-preview
+            max-width: 178px
+            display: flex
+            justify-content: space-between
+            position: absolute
+            bottom: 27px
+            left: 50%
+            transform: translateX(-50%)
+            &__block
+                border: 1px solid #282828
+                &:nth-child(-n+4)
+                    height: 14px
+                    width: 15px
+                    border-radius: 50%
+                    outline: none
+                &:nth-child(3)
+                    margin-right: 16px
+                &:nth-child(4)
+                    display: block
+
+                &--active
+                    background-color: #282828
+    .slide
+        &-1
+            background: url(../img/big-slides/slider_1.jpg) no-repeat center center
+        &-2
+            background: url(../img/big-slides/slider_2.jpg) no-repeat center center
+        &-3
+            background: url(../img/big-slides/slider_3.jpg) no-repeat center center
+        &-4
+            background: url(../img/big-slides/slider_4.jpg) no-repeat center center
+        &-container
+            display: flex
+            justify-content: flex-end
+            padding-top: 234px
+        &-info
+            margin: 0
+            max-width: 410px
+            text-align: left
+            &__test
+                display: none
+            &__descr
+                display: block
+                font-size: 18px
+                line-height: 29px
+                margin-bottom: 28px
+            &__all
+                display: inline-block
+                background-color: rgba(255,255,255,0.0)
+                border: 1px solid #212121
+                border-radius: 3px
+                margin-left: 19px
+                color: #000000
+    .slide
+        background-position: 36% 100%
+@media(min-width: 991px)
+    .slider
+        &-nav
+            display: block
+            height: 85px
+            width: 77px
+            position: absolute
+            line-height: 85px
+            text-align: center
+            opacity: 0.1
+            background-color: #000000
+            border-radius: 3px
+            top: 50%
+            transform: translateY(-50%)
+            cursor: pointer
+            transition: opacity 0.3s
+            &:hover
+                opacity: 0.3
+        &-arrow__left
+            height: 20px
+            width: 20px
+            margin-right: 11px
+            margin-bottom: -3px
+            filter: invert(100%)
+        &-arrow__right
+            height: 20px
+            width: 20px
+            margin-left: 11px
+            margin-bottom: -3px
+            filter: invert(100%)
+        &-left
+            left: 0
+        &-right
+            right: 0
+        &-preview
+            max-width: 100%
+            &__block
+                display: flex
+                justify-content: center
+                align-items: center
+                border-radius: 3px
+                background-color: blue
+                border: none
+                background-color: rgba(0,0,0,0.20)
+                cursor: pointer
+                &:hover
+                    background-color: rgba(0,0,0,0.4)
+                &:nth-child(-n+4)
+                    height: 55px
+                    width: 45px
+                    border-radius: 3px
+                &:nth-child(4)
+                    display: flex
+                &--active
+                    background-color: rgba(0,0,0,0.5)
+            &__image
+                height: 43px
+                width: 33px
+                object-fit: cover
+                opacity: 1
+                border-radius: 3px
+            &__wrap
+                display: flex
+                justify-content: center
+                align-items: center
+            &__info
+                display: none
+    .slide
+        &-container
+            max-width: 1140px
+            width: 85%
+            margin: 0 auto
+        &-info
+            max-width: 475px
+            &__title
+                font-size: 35px
+                margin-bottom: 10px
+            &__descr
+                font-size: 22px
+                margin-bottom: 21px
+            &__all
+                margin-left: 16px
+                padding: 9px 27px
+            &__button
+                position: relative
+                z-index: 100
+                transition: all 0.3s
+                &:hover
+                    border-radius: 10px
+
+@media(min-width: 1140px)
+    .slider
+        &-preview
+            width: 100%
+            justify-content: center
+            &__wrap
+                padding-left: 5px
+                padding-right: 5px
+            &__block
+                &:nth-child(-n+4)
+                    height: 55px
+                    width: 224px
+            &__image
+                height: 44px
+                width: 40px
+            &__info
+                display: block
+                margin-left: 7px
+                color: #ffffff
+            &__descr
+                font-size: 10px
+                line-height: 1.2
+                font-weight: 400
+                text-shadow: 0px 1px 1px rgba(2,2,2,0.2)
+            &__title
+                font-size: 11px
+                font-weight: 700
+    .slide
+        &-container
+            width: 1140px
+            padding-right: 110px
+            padding-top: 227px
+@media(min-width: 1199px)
+    .slider
+        &-preview
+
+            bottom: 20px
+            &__block
+                &:nth-child(-n+4)
+                    height: 67px
+                    width: 274px
+            &__wrap
+                padding-left: 6px
+                padding-right: 6px
+            &__image
+                height: 55px
+                width: 48px
+            &__info
+                margin-left: 11px
+            &__descr
+                font-size: 12px
+                line-height: 12px
+            &__title
+                font-size: 13px
+                line-height: 14px
+    .slide
+        &-container
+            padding-right: 84px
+        &-info
+            max-width: 570px
+            &__title
+                font-size: 42px
+                margin-bottom: 15px
+            &__descr
+                font-size: 26px
+                margin-bottom: 27px
+            &__button
+                padding: 11px 30px
+                font-size: 16px
+            &__all
+                padding: 11px 32px
+@media(min-width: 1920px)
+    .slide
+        background-position: 100% 100%
+        background-size: cover
+        overflow: hidden

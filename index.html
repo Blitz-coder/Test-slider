@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тестовое задание</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <section class="slider">
+        <!-- Слайды -->
+        <div class="slide slide-1 slide-active">
+            <div class=" slide-container">
+                <div class="slide-info">
+                    <h2 class="slide-info__title">Этот текст добавлен для демонстрации на странице</h2>
+                    <p class="slide-info__descr">Акция действует с 01.07.18 по 31.07.18</p>
+                    <p class="slide-info__test">Тест на внимательность</p>
+
+                    <a href="#" class="slide-info__about slide-info__button">Подробнее</a>
+                    <a href="#" class="slide-info__all slide-info__button">Все акции</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide slide-2">
+            <div class="slide-container">
+                <div class="slide-info">
+                    <h2 class="slide-info__title">Этот текст добавлен для демонстрации на странице</h2>
+                    <p class="slide-info__descr">Акция действует с 01.07.18 по 31.07.18</p>
+                    <p class="slide-info__test">Тест на внимательность</p>
+                    <a href="#" class="slide-info__about slide-info__button">Подробнее</a>
+                    <a href="#" class="slide-info__all slide-info__button">Все акции</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide slide-3">
+            <div class="slide-container">
+                <div class="slide-info">
+                    <h2 class="slide-info__title">Этот текст добавлен для демонстрации на странице</h2>
+                    <p class="slide-info__descr">Акция действует с 01.07.18 по 31.07.18</p>
+                    <p class="slide-info__test">Тест на внимательность</p>
+                    <a href="#" class="slide-info__about slide-info__button">Подробнее</a>
+                    <a href="#" class="slide-info__all slide-info__button">Все акции</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide slide-4">
+            <div class="slide-container">
+                <div class="slide-info">
+                    <h2 class="slide-info__title">Этот текст добавлен для демонстрации на странице</h2>
+                    <p class="slide-info__descr">Акция действует с 01.07.18 по 31.07.18</p>
+                    <p class="slide-info__test">Тест на внимательность</p>
+                    <a href="#" class="slide-info__about slide-info__button">Подробнее</a>
+                    <a href="#" class="slide-info__all slide-info__button">Все акции</a>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Кнопки вперёд-назад -->
+        <div class="slider-nav slider-left">
+
+            <img class="slider-arrow__left" src="img/left-arrow.svg" alt="Назад">
+        </div>
+        <div class="slider-nav slider-right">
+            <img class="slider-arrow__right" src="img/right-arrow.svg" alt="Вперёд">
+        </div>
+
+        <!-- Блок превьюшек -->
+        <div class="slider-preview">
+
+            <div id="0" class="slider-preview__block slider-preview__block--active">
+                <div class="slider-preview__wrap">
+                    <img src="img/prev/slider_1pre.jpg" alt="Slide 1" class="slider-preview__image">
+                    <div class="slider-preview__info">
+                        <p class="slider-preview__descr">Акция действует с 01.07.18</p>
+                        <p class="slider-preview__title">Этот текст добавлен для демонстрации на странице</p>
+                    </div>
+                </div>
+            </div>
+            <!-- /.slider-preview__block -->
+
+            <div id="1" class="slider-preview__block">
+                <div class="slider-preview__wrap">
+                    <img src="img/prev/slider_2pre.jpg" alt="Slide 2" class="slider-preview__image">
+                    <div class="slider-preview__info">
+                        <p class="slider-preview__descr">Акция действует с 01.07.18</p>
+                        <p class="slider-preview__title">Этот текст добавлен для демонстрации на странице</p>
+                    </div>
+                </div>
+            </div>
+            <!-- /.slider-preview__block -->
+
+            <div id="2" class="slider-preview__block">
+                <div class="slider-preview__wrap">
+                    <img src="img/prev/slider_3pre.jpg" alt="Slide 3" class="slider-preview__image">
+                    <div class="slider-preview__info">
+                        <p class="slider-preview__descr">Акция действует с 01.07.18</p>
+                        <p class="slider-preview__title">Этот текст добавлен для демонстрации на странице</p>
+                    </div>
+                </div>
+            </div>
+            <!-- /.slider-preview__block -->
+
+            <div id="3" class="slider-preview__block">
+                <div class="slider-preview__wrap">
+                    <img src="img/prev/slider_4pre.jpg" alt="Slide 4" class="slider-preview__image">
+                    <div class="slider-preview__info">
+                        <p class="slider-preview__descr">Акция действует с 01.07.18</p>
+                        <p class="slider-preview__title">Этот текст добавлен для демонстрации на странице</p>
+                    </div>
+                </div>
+            </div>
+            <!-- /.slider-preview__block -->
+
+        </div>
+        <!-- /.slider-prewiev -->
+
+        <!-- Начальный экран с кнопкой -->
+        <div class="slider-start">
+            <button class="slider-start__btn">Начать демонстрацию</button>
+            <h1 class="slider-start__counter slider-start__hidden">5</h1>
+        </div>
+    </section>
+    <!-- /.slider -->
+
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
